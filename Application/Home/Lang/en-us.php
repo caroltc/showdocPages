@@ -91,6 +91,7 @@ return array(
     'attorn'=>'Attorn',
     'delete'=>'Delete',
     'more_item'=>'More items',
+    'generate_pages_item'=>'Generate static pages',
     'login_or_register'=>'Login/Register',
     'about_showdoc'=>'About ShowDoc',
     'my_item'=>'My items',

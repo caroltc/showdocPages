@@ -27,6 +27,7 @@
             </if>
 
             <li><a href="{:U('Home/Item/index')}">{$Think.Lang.more_item}</a></li>
+            <li><a href="{:U('Home/GenerateStatic/index', array('item_id'=>$item['item_id']))}" target="_blank">{$Think.Lang.generate_pages_item}</a></li>
           </ul>
       </li>
       <else />

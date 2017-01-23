@@ -1,0 +1,68 @@
+<include file="StaticsTemplate/header" />
+<link rel="stylesheet" href="../css/statics_show.css?1.1d.1thddde" />
+
+
+<div class="doc-head row" >
+  <div class="left "><h2><a href="../">{$item.item_name}</a></h2></div>
+  <div class="right">
+    <ul class="inline pull-right">
+
+    </ul>
+    </div>  
+  </div>
+</div>
+
+<div class="doc-body row">
+  <!-- 左侧栏菜单 -->
+    <div class="doc-left span3 bs-docs-sidebar pull-left">
+
+      <ul class="nav nav-list bs-docs-sidenav">
+
+        <!-- 一级目录的页面在前面 -->
+        <foreach name="pages" item="page">
+          <li ><a href="pages/{$page.page_id}.html" target="main"><i class="icon-blank"></i>{$page.page_title}</a></li>
+        </foreach>
+
+        <foreach name="catalogs" item="catalog">
+
+        
+          <li><a href="#"><i class="icon-chevron-right"></i>{$catalog.cat_name}</a>
+            <ul class="child-ul nav-list hide">
+              <!-- 二级目录的页面们 -->
+              <foreach name="catalog.pages" item="catalog_page">
+                <li ><a href="pages/{$catalog_page.page_id}.html" target="main">{$catalog_page.page_title}</a></li>
+              </foreach>
+              <!-- 二级目录的子目录们（三级目录） -->
+                <foreach name="catalog.catalogs" item="catalog3">   
+                  <li class="third-child-catalog"><a href="#"><i class="icon-chevron-right"></i>{$catalog3.cat_name}</a>
+                    <ul class="child-ul nav-list hide">
+                      <!-- 二级目录的页面们 -->
+                      <foreach name="catalog3.pages" item="catalog3_page">
+                        <li ><a href="pages/{$catalog3_page.page_id}.html" target="main">{$catalog3_page.page_title}</a></li>
+                      </foreach>
+                    </ul>
+                  </li>
+
+                </foreach>
+
+            </ul>
+          </li>
+
+        </foreach>
+      </ul>
+    </div>
+    <div class="doc-right  span12 ">
+      <!-- 页面内容 -->
+      <div class='iframe_content'>
+        <iframe id="page-content" width="100%" scrolling="yes"  height="100%" frameborder="0" style=" overflow:visible; height:100%;" name="main"  seamless ="seamless"></iframe>
+      </div>
+
+    </div>
+
+<include file="StaticsTemplate/footer" />
+
+<script src="../js/jquery.bootstrap-growl.min.js"></script>
+<script src="../js/jquery.goup.min.js"></script>
+<script src="../js/jquery.hotkeys.js"></script>
+
+<script src="../js/statics_show.js?v=1.2121"></script>

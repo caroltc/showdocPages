@@ -91,6 +91,7 @@ return array(
     'attorn'=>'转让',
     'delete'=>'删除',
     'more_item'=>'更多项目',
+    'generate_pages_item'=>'生成静态项目',
     'login_or_register'=>'登录/注册',
     'about_showdoc'=>'关于ShowDoc',
     'my_item'=>'我的项目',
