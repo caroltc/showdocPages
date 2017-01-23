@@ -16,7 +16,7 @@
   <!-- 左侧栏菜单 -->
     <div class="doc-left span3 bs-docs-sidebar pull-left">
 
-      <ul class="nav nav-list bs-docs-sidenav">
+      <ul class="nav nav-list bs-docs-sidenav" style="padding-right:0;">
 
         <!-- 一级目录的页面在前面 -->
         <foreach name="pages" item="page">
@@ -27,7 +27,7 @@
 
         
           <li><a href="#"><i class="icon-chevron-right"></i>{$catalog.cat_name}</a>
-            <ul class="child-ul nav-list hide">
+            <ul class="child-ul nav-list hide" style="padding-right:0;">
               <!-- 二级目录的页面们 -->
               <foreach name="catalog.pages" item="catalog_page">
                 <li ><a href="pages/{$catalog_page.page_id}.html" target="main">{$catalog_page.page_title}</a></li>
@@ -35,7 +35,7 @@
               <!-- 二级目录的子目录们（三级目录） -->
                 <foreach name="catalog.catalogs" item="catalog3">   
                   <li class="third-child-catalog"><a href="#"><i class="icon-chevron-right"></i>{$catalog3.cat_name}</a>
-                    <ul class="child-ul nav-list hide">
+                    <ul class="child-ul nav-list hide" style="padding-right:0;">
                       <!-- 二级目录的页面们 -->
                       <foreach name="catalog3.pages" item="catalog3_page">
                         <li ><a href="pages/{$catalog3_page.page_id}.html" target="main">{$catalog3_page.page_title}</a></li>
